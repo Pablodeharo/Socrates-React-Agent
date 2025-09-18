@@ -1,0 +1,22 @@
+{
+  "dependencies": [
+    ".",
+    "langchain",
+    "langchain-community",
+    "langgraph",
+    "huggingface_hub",
+    "sympy",
+    "bark",
+    "scipy",
+    "numpy",
+    "wikipedia"
+  ],
+  "graphs": {
+    "socrates_agent": {
+      "path": "graph:app",
+      "description": "Agente Sócrates con herramientas de Wikipedia, calculadora y texto a voz"
+    }
+  },
+  "env": "./.env"
+}
+
