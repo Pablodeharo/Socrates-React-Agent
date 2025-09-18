@@ -5,13 +5,18 @@ Este proyecto implementa un Agente ReAct (Razonamiento y Actuación) usando Lang
 El agente se especializa en conversaciones filosóficas y puede:
 
 💭 Razonar a través de preguntas filosóficas complejas
+
 🔧 Usar múltiples herramientas para recopilar información y realizar acciones
+
 📚 Buscar en una base de datos vectorizada de textos filosóficos
+
 🗣️ Generar respuestas en audio usando síntesis de voz
+
 🧮 Realizar cálculos matemáticos y computaciones de fechas históricas
 
 🛠️ Arquitectura
 El sistema sigue el patrón ReAct que permite a los sistemas de IA combinar capacidades de razonamiento de LLMs con ejecución de acciones:
+
 Entrada Usuario → Razonamiento LLM → Selección Herramienta → Ejecución Acción → Observación → Bucle...
 
 Componentes Clave:
