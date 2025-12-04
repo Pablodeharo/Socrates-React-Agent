@@ -1,27 +1,54 @@
-🤖 ReAct Agent - Philosophical AI Assistant
+🤖 ReAct Agent – Philosophical AI Assistant
 
-This project implements a ReAct Agent (Reasoning and Acting) using LangGraph and a local Spanish-language LLM. ReAct agents combine LLM reasoning with tool execution, thinking iteratively, using tools, and acting upon observations to achieve objectives. The agent specializes in philosophical conversations and can:
+This project implements a ReAct Agent (Reasoning + Acting) built with LangGraph, LangChain, ChromaDB, BarkAI, and a local Spanish LLM fine-tuned on the complete works of Plato.
+The agent engages in philosophical dialogue using a Socratic, reflective reasoning style, combining LLM thinking with tool execution.
 
-💭 Reason through complex philosophical questions
-🔧 Use multiple tools to gather information and perform actions
-📚 Search in a vectorized database of philosophical texts
-🗣️ Generate responses in audio using speech synthesis
-🧮 Perform mathematical calculations and historical date computations
+✨ Key Features
+🧠 Philosophical Intelligence
 
-🛠️ Architecture
+Generates thoughtful, Socratic-style responses
 
-The system follows the ReAct pattern, which allows AI systems to combine LLM reasoning capabilities with action execution:
+Encourages reflection through guided questioning
 
-User Input → LLM Reasoning → Tool Selection → Action Execution → Observation → Loop...
+Built on a custom model trained on Plato’s dialogues
 
-Key Components:
+🔧 ReAct Agent Loop
 
-graph.py: Implementation of the main ReAct flow using LangGraph
+The agent behaves in an iterative reasoning format:
 
-state.py: Agent state management schema
+Think → Choose a Tool → Act → Observe → Repeat
 
-tools.py: Collection of specialized tools (Wikipedia, TTS, Calculator, Vector Search)
+It can:
 
-prompts.py: System prompts and tool guidance
+Perform step-by-step reasoning
 
-utils/vectorizador.py: Vector database client for philosophical texts
+Select and execute tools
+
+Retrieve observations and continue reasoning
+
+🛠️ Integrated Tools
+
+ChromaDB Vector Search → retrieve philosophical texts
+
+Wikipedia API → external factual lookup
+
+BarkAI (Text-to-Speech) → generate spoken responses
+
+Math / Date Calculator → operations and historical date logic
+
+Local Hugging Face Model loaded via pipeline
+
+🏛️ System Architecture
+
+The agent follows the ReAct pattern:
+
+User Input → LLM Reasoning → Tool Call → Action → Observation → Loop
+
+Project Structure
+File	Description
+graph.py	Main ReAct flow implemented with LangGraph
+state.py	Global agent state schema
+tools.py	Tool implementations (Wikipedia, TTS, Vector Search, etc.)
+prompts.py	System prompts and tool-guidance instructions
+configuration.py	Setup of tools, model, and graph
+utils/vectorizador.py	Vector database logic for philosophical texts
